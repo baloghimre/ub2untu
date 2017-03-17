@@ -25,5 +25,10 @@ echo "  ╚══════╝ ╚═════╝╚═╝  ╚═╝╚═
 echo ""
 echo "                        Pink Monkey"
 echo ""
+echo "            A telepítés azonnal elindul..."
 
+echo "$(date) - Telepítés megkezdése." > install.log
 
+sleep 5
+
+./update.sh
