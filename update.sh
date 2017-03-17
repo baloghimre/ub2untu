@@ -30,3 +30,6 @@ else
 echo "\33[31mSIKERTELEN FRISSÍTÉS. Ellenőrizze az internetkapcsolatot, majd futtassa újra a telepítőt!\33[0m"
 echo "$(date) - Az operációs rendszer frissítése sikertelen." >> install.log
 fi
+
+./programs.sh
+
