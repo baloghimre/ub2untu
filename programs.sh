@@ -22,15 +22,18 @@ echo $TIP
 if [ $TIP = "1" ]; then
 
 while read line; do    
-    echo "A(z) "$line" program telepítése...";
-    sudo apt-get -y install $line; 2>> install.log
+    echo "A(z) "$line" program telepítése..."
+    sudo apt-get -y install $line 2>> install.log > /dev/null;
+    #stderr vizsgálata!!
+    echo "$(date) - $line program sikeresen telepítve."
+    
 done < programok-tanari.txt
 	
 else
 
 while read line; do    
-    echo "A(z) "$line" program telepítése...";
-    sudo apt-get -y install $line; 2>> install.log
+    echo "A(z) "$line" program telepítése..."
+    sudo apt-get -y install $line 2>> install.log > /dev/null;
 done < programok-tanulo.txt
 
 fi
