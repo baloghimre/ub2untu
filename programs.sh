@@ -7,7 +7,7 @@ echo
 
 # Kérdezze meg, hogy tanári vagy tanulói számítógép.
 # programok-tanulo.txt vagy programok-tanar.txt (utóbbi esetében tegye fel a lubuntu-desktop csomagot is!)
-# a választást mentse egy "felhasznalo" nevű fájlba (tartalma: tanulo vagy tanari) - később a felhasználók
+# a választást mentse egy "user" nevű fájlba (tartalma: tanulo vagy tanari) - később a felhasználók
 # létrehozásánál szükségünk lesz rá. (következő script)
 
 
