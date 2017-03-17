@@ -5,7 +5,6 @@ echo
 echo "\033[1m I. RENDSZERFRISSÍTÉS\033[0m"
 echo
 
-
 #CSOMAGLISTÁK FRISSÍTÉSE ÚJ
 
 echo "Csomaglisták frissítése..."
@@ -19,10 +18,7 @@ echo "\33[31mSIKERTELEN FRISSÍTÉS. Ellenőrizze az internetkapcsolatot, majd f
 echo "$(date) - Csomagtárolók frissítése sikertelen." >> install.log
 fi
 
-
-
 # OPERÁCIÓS RENDSZER FRISSÍTÉSE
-
 
 echo "Csomaglisták frissítése..."
 hiba="$(sudo apt-get upgrade 2>&1 > /dev/null)"
