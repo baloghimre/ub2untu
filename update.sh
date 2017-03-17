@@ -32,7 +32,7 @@ fi
 hiba=0
 
 echo "Operációs rendszer fájljainak frissítése... (hosszú ideig tarthat)"
-hiba=$( sudo apt-get update | grep -c 'hiba' )
+hiba=$( sudo apt-get upgrade | grep -c 'hiba' )
 
 if [ "$hiba" -eq 0 ] ; then
 echo "A frissítés sikeres."
