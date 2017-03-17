@@ -20,7 +20,7 @@ fi
 
 # OPERÁCIÓS RENDSZER FRISSÍTÉSE
 
-echo "Csomaglisták frissítése..."
+echo "Operációs rendszer frissítése... (hosszú ideig eltarthat)"
 hiba="$(sudo apt-get upgrade 2>&1 > /dev/null)"
 echo $hiba
 if [$hiba = ""]; then
