@@ -15,9 +15,8 @@ if [$hiba = ""]; then
 echo "A frissítés sikeres."
 echo "$(date) - Csomagtárolók frissítése sikeres." >> install.log
 else
-echo "\33[31mSIKERTELEN FRISSÍTÉS. Ellenőrizze az internetkapcsolatot, majd futtassa újra a telepítőt! A telepítő kilép.\33[0m"
+echo "\33[31mSIKERTELEN FRISSÍTÉS. Ellenőrizze az internetkapcsolatot, majd futtassa újra a telepítőt!\33[0m"
 echo "$(date) - Csomagtárolók frissítése sikertelen." >> install.log
-exit
 fi
 
 
@@ -30,9 +29,8 @@ hiba="$(sudo apt-get upgrade 2>&1 > /dev/null)"
 echo $hiba
 if [$hiba = ""]; then
 echo "A frissítés sikeres."
-echo "$(date) - Csomagtárolók frissítése sikeres." >> install.log
+echo "$(date) - Az operációs rendszer frissítése sikeres." >> install.log
 else
-echo "\33[31mSIKERTELEN FRISSÍTÉS. Ellenőrizze az internetkapcsolatot, majd futtassa újra a telepítőt! A telepítő kilép.\33[0m"
-echo "$(date) - Csomagtárolók frissítése sikertelen." >> install.log
-exit
+echo "\33[31mSIKERTELEN FRISSÍTÉS. Ellenőrizze az internetkapcsolatot, majd futtassa újra a telepítőt!\33[0m"
+echo "$(date) - Az operációs rendszer frissítése sikertelen." >> install.log
 fi
