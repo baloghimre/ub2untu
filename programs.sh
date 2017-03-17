@@ -1,5 +1,5 @@
 #!/bin/bash
-
+TIP=""
 clear
 echo
 echo "\033[1m II. PROGRAMOK TELEPÍTÉSE\033[0m"
@@ -11,15 +11,26 @@ echo
 # létrehozásánál szükségünk lesz rá. (következő script)
 
 
+echo "Kérem a telepítési módót! 0/1"
+echo "0 : Diák"
+echo "1 : Tanár"
+read TIP
+echo -n "Kiválasztott telepítésí mód : "
+echo $TIP
 
-# tanulo
+
+if [ $TIP = "1" ]; then
+
+while read line; do    
+    echo "A(z) "$line" program telepítése..."
+    sudo apt-get -y install $line 2> install.log
+done < programok-tanari.txt
+	
+else
+
 while read line; do    
     echo "A(z) "$line" program telepítése..."
     sudo apt-get -y install $line 2> install.log
 done < programok-tanulo.txt
 
-# tanari
-while read line; do    
-    echo "A(z) "$line" program telepítése..."
-    sudo apt-get -y install $line 2> install.log
-done < programok-tanulo.txt
+fi
