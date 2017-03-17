@@ -23,14 +23,14 @@ if [ $TIP = "1" ]; then
 
 while read line; do    
     echo "A(z) "$line" program telepítése..."
-    sudo apt-get -y install $line 2> install.log
+    sudo apt-get -y install $line 2>> install.log
 done < programok-tanari.txt
 	
 else
 
 while read line; do    
     echo "A(z) "$line" program telepítése..."
-    sudo apt-get -y install $line 2> install.log
+    sudo apt-get -y install $line 2>> install.log
 done < programok-tanulo.txt
 
 fi
