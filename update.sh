@@ -2,7 +2,7 @@
 
 clear
 echo
-echo "\033[1m I. RENDSZERFRISSÍTÉS\033[0m"
+echo "\033[33m I. RENDSZERFRISSÍTÉS\033[0m"
 echo
 
 #CSOMAGLISTÁK FRISSÍTÉSE ÚJ
