@@ -2,7 +2,7 @@
 TIP=""
 clear
 echo
-echo "\033[1m II. PROGRAMOK TELEPÍTÉSE\033[0m"
+echo "\033[33m II. PROGRAMOK TELEPÍTÉSE\033[0m"
 echo
 
 # Kérdezze meg, hogy tanári vagy tanulói számítógép.
