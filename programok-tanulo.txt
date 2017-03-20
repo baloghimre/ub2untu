@@ -48,3 +48,4 @@ scratch
 ubuntu-edu-primary
 ubuntu-edu-secondary
 ubuntu-edu-tertiary
+cifs-utils
