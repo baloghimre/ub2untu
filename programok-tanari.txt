@@ -32,7 +32,6 @@ scribus
 mypaint
 abiword
 pinta
-mono
 mono-gmcs
 mono-gac
 mono-utils
@@ -40,7 +39,7 @@ monodevelop
 monodoc-browser
 monodevelop-nunit
 monodevelop-versioncontrol
-ecolution
+evolution
 bluefish
 fpc
 lazarus
