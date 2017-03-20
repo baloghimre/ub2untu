@@ -11,6 +11,9 @@ echo
 # létrehozásánál szükségünk lesz rá. (következő script)
 
 
+rm -rf /tmp/telepiteni.txt
+
+
 echo "Kérem a telepítési módót! 0/1"
 echo "0 : Diák"
 echo "1 : Tanár"
@@ -22,18 +25,41 @@ echo $TIP
 if [ $TIP = "1" ]; then
 
 while read line; do    
-    echo "A(z) "$line" program telepítése..."
-    sudo apt-get -y install $line 2>> install.log > /dev/null;
-    #stderr vizsgálata!!
-    echo "$(date) - $line program sikeresen telepítve."
     
+    printf $line >> /tmp/telepiteni.txt
+    printf " " >> /tmp/telepiteni.txt
+
 done < programok-tanari.txt
+
+while read p; do    
+       echo "A következő programok kerülnek telepítésre:"
+       echo
+done < /tmp/telepiteni.txt
+echo $p
+echo ""
+echo "A telepítés 5 másodperc múlva elindul.."
+sleep 5
+
+sudo apt-get --yes install $p 
 	
 else
 
 while read line; do    
-    echo "A(z) "$line" program telepítése..."
-    sudo apt-get -y install $line 2>> install.log > /dev/null;
-done < programok-tanulo.txt
+    
+    printf $line >> /tmp/telepiteni.txt
+    printf " " >> /tmp/telepiteni.txt
+
+done < programok-tanari.txt
+
+while read p; do    
+       echo "A következő programok kerülnek telepítésre:"
+       echo
+done < /tmp/telepiteni.txt
+echo $p
+echo ""
+echo "A telepítés 5 másodperc múlva elindul.."
+sleep 5
+
+sudo apt-get --yes install $p 
 
 fi
