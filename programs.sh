@@ -66,8 +66,9 @@ fi
 
 # BELSŐ HÁLÓ!!
 echo "Packet Tracer 6.3 letöltése"
-wget http://10.111.40.1/~iso/VMware%20Workstation%20Player%2012.5.2%20Linux%2064bit/VMware-Player-12.5.2-4638234.x86_64.bundle
-chmod +x VMWare*.bundle
+wget http://10.111.40.1/~iso/Packet%20Tracer%206.3/PacketTracer63_linux.tar.gz
+tar -xf PacketTracer63_linux.tar.gz
+
 echo "Packet Tracer 6.3 telepítése..."
 sudo ./VMWare*.bundle
 
