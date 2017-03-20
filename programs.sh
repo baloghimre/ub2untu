@@ -68,7 +68,7 @@ fi
 echo "Packet Tracer 6.3 letöltése"
 wget http://10.111.40.1/~iso/Packet%20Tracer%206.3/PacketTracer63_linux.tar.gz
 tar -xf PacketTracer63_linux.tar.gz
-
+cd PacketTracer63
 echo "Packet Tracer 6.3 telepítése..."
-sudo ./VMWare*.bundle
+sudo ./install
 
