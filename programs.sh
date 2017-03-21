@@ -49,7 +49,7 @@ while read line; do
     printf $line >> /tmp/telepiteni.txt
     printf " " >> /tmp/telepiteni.txt
 
-done < programok-tanari.txt
+done < programok-tanulo.txt
 
 while read p; do    
        echo "A következő programok kerülnek telepítésre:"
