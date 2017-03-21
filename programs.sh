@@ -60,15 +60,42 @@ echo ""
 echo "A telepítés 5 másodperc múlva elindul.."
 sleep 5
 
-sudo apt-get --yes install $p 
+sudo apt-get --yes install $p 2> install.log
 
 fi
 
 # BELSŐ HÁLÓ!!
 echo "Packet Tracer 6.3 letöltése"
-wget http://10.111.40.1/~iso/Packet%20Tracer%206.3/PacketTracer63_linux.tar.gz
+wget http://10.111.40.1/~iso/Packet%20Tracer%206.3/PacketTracer63_linux.tar.gz 2> install.log
 tar -xf PacketTracer63_linux.tar.gz
 cd PacketTracer63
 echo "Packet Tracer 6.3 telepítése..."
 sudo ./install
+
+#image fájlok letöltése
+echo "ISO és telepítőfájlok letöltése a merevlemezre.."
+
+sudo mkdir /install_files
+cd /install_files
+
+#Windows XP SP3
+sudo mkdir WinXP
+chmod 777 WinXP
+cd WinXP
+wget http://10.111.40.1/~iso/Microsoft.Windows.XP.Pro.SP3.VL.HUN.x86.IE8.WMP11.Integrated.2014.May/Microsoft.Windows.XP.Pro.SP3.VL.HUN.x86.IE8.WMP11.Integrated.2014.May.iso
+wget http://10.111.40.1/~iso/Microsoft.Windows.XP.Pro.SP3.VL.HUN.x86.IE8.WMP11.Integrated.2014.May/install.txt
+wget http://10.111.40.1/~iso/Microsoft.Windows.XP.Pro.SP3.VL.HUN.x86.IE8.WMP11.Integrated.2014.May/serial.txt
+cd ..
+chmod 744 WinXP
+
+#Ubuntu 14.04.5
+sudo mkdir Ubuntu14045
+chmod 777 Ubundtu14045
+cd Ubuntu14045
+wget http://10.111.40.1/~iso/Ubuntu%20Server%2014.04.5%2032bit/ubuntu-14.04.5-server-i386.iso
+cd ..
+chmod 744 Ubuntu14045
+
+#Windows Server!!!
+
 
