@@ -9,9 +9,9 @@ case $? in
 esac	
 	#echo $fajl
 
-for i in {214..220}
+for i in {100..131}
 do
-sshpass -p '12345' scp -P 22 $fajl rgazda@10.111.4.$i:~/ssh/ 2>/dev/null 
+sshpass -p 'tanulo' scp -P 22 $fajl rgazda@10.111.206.$i:~/ssh/ 2>/dev/null 
 done
 
 
