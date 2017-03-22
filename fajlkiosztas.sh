@@ -11,7 +11,7 @@ esac
 
 for i in {100..131}
 do
-sshpass -p 'tanulo' scp -P 22 $fajl rgazda@10.111.206.$i:~/ssh/ 2>/dev/null 
+sshpass -p 'tanulo' scp -P 22 $fajl tanulo@10.111.206.$i:~/ssh/ 2>/dev/null 
 done
 
 
