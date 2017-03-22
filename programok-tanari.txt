@@ -50,3 +50,4 @@ ubuntu-edu-secondary
 ubuntu-edu-tertiary
 cifs-utils
 playonlinux
+sshpass
