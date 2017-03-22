@@ -64,7 +64,7 @@ sudo apt-get --yes install $p 2> install.log
 
 fi
 
-# BELSŐ HÁLÓ!!
+# BELSŐ HÁLÓ!!  FELHSZNÁLÓT VÁLTANI!!!!! tanulo-ra
 echo "Packet Tracer 6.3 letöltése"
 wget http://10.111.40.1/~iso/Packet%20Tracer%206.3/PacketTracer63_linux.tar.gz 2> install.log
 tar -xf PacketTracer63_linux.tar.gz
