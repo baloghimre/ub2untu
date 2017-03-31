@@ -41,6 +41,6 @@ sudo mount -t cifs //DELL-AD/mindenki /media/tanulo/mindenki -o username=$felh,r
 echo $felh > /tmp/felh.txt
 
 #fi
-
-
+#!!!!!!!!!!!!!!
+# sudo visudo-ba beírni az mkdirt!!!
 
